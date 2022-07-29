@@ -76,6 +76,24 @@ const result = await makeHttpRequest('http://127.1:7001/', {
 // result.data ...
 ```
 
+contentType 设置发送的类型, 需要发送json格式的,可以加上 contentType
+
+```typescirpt
+import { makeHttpRequest } from '@midwayjs/core';
+   const result =  makeHttpRequest(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          data: {
+            a:1,
+            b:2
+          },
+          contentType: 'json',
+          dataType: 'json',
+        });
+```
+
 设置请求超时时间。
 
 ```typescript
